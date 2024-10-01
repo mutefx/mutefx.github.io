@@ -1,6 +1,23 @@
 body {
     background-color: #1d1d1d;
     cursor: crosshair;
+    background: linear-gradient(
+        315deg, 
+        rgb(34, 34, 35) 0%, 
+        rgb(34, 34, 42) 20%, 
+        rgb(10, 10, 17) 40%, 
+        rgb(20, 20, 52) 70%, 
+        rgba(0,0,0,1) 100%
+    );
+
+    animation: gradientBg 30s linear infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+@keyframes gradientBg {
+    0%   {background-position: 0% 0%;}
+    50%  {background-position: 100% 100%;}
+    100% {background-position: 0% 0%;}
 }
 
 .title1 {
@@ -15,43 +32,121 @@ body {
     font-optical-sizing: auto;
     font-weight: 333;
     font-size: 30px;
+    animation-name: title1in, title1in_;
+    animation-duration: 1.5s, 0.75s;
+    animation-timing-function: cubic-bezier(0,.93,.31,.99), ease;
+    animation-fill-mode: forwards;
 
-    transition: all 1.5s cubic-bezier(0,.98,0,.99);
+    transition: all 0.3s ease;
+}
+@keyframes title1in {
+    from {scale: 8; rotate: -50deg;}
+    to   {scale: 1; }
+}
+@keyframes title1in_ {
+    from {opacity: 0;}
+    to   {opacity: 1;}
 }
 .title1:hover{
     cursor: pointer;
-    color: #c7c7c7;
-    transition: all 1.5s cubic-bezier(0,.98,0,.99);
+    color: #a1a1a1;
+    transition: all 0.3s ease;
 }
 
 .navBar {
-    background-color: #181818;
-    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    white-space: nowrap;
 
-    transition: all 0.8s cubic-bezier(0,.98,0,.99);
+    transition: all 0.8s ease;
 }
 .navBar a {
     /* text */
     text-decoration: none;
     color: white;
     font-family: "Montserrat", sans-serif;
-    font-weight: 150;
+    font-weight: 300;
     text-align: center;
 
     /* box */
-    float: right;
-    padding: 7px 14px;
+    padding: 11px 14px 11px 14px;
+    display: inline-block;
 
     /* transition */
-    transition: all 0.8s cubic-bezier(0,.98,0,.99);
+    transition: all 0.8s ease;
 }
-.navBar a:first-child {
-    float: left;
+.navBar a:hover {
+    text-shadow: 
+    0 0 10px #7b9aff, 0 0 20px #ffffffd8, 
+    0 0 30px #0059ff;
+    transition: all 0.3s ease;
+}
+@media only screen and (max-width: 550px) {.navBar a {padding: 11px 7px 11px 7px}}
+@media only screen and (max-width: 500px) {.navBar a {padding: 11px 3px 11px 3px}}
+@media only screen and (max-width: 450px) {
+    [data-alttext] > span   {display: none}
+    [data-alttext]::before  {content: attr(data-alttext)}
+    .navBar a {padding: 11px 7px 11px 7px}
+}
+@media only screen and (max-width: 300px) {.navBar {translate: -40px 0%;}}
+
+.allButTitle {
+    opacity: 0;
+    animation: fadeIn 3s 0.5s forwards;
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to   {opacity: 1;}
+}
+
+.navBarJPtext {
+    position: absolute;
+    top: 1%;
+    transition: all 0.8s ease;
+}
+.navBarJPtext a {
+    /* text */
+    text-decoration: none;
+    color: white;
     font-family: "Noto Sans JP", sans-serif;
     font-size: 23px;
     font-weight: 320;
+    text-align: center;
+
+    /* box */
+    padding: 7px 14px;
+
+    /* transition */
+    transition: all 0.8s ease;
 }
-.navBar a:hover {
-    background-color: #474747;
-    transition: all 0.8s cubic-bezier(0,.98,0,.99);
+
+.navBarJPtext:hover a {
+    text-shadow: 
+    0 0 10px #ffffff3f, 0 0 20px #ffffff48, 
+    0 0 30px #0059ffb2;
 }
+
+.threeLineMenu {
+    padding: 5px 14px 5px 14px;
+    float: right;
+
+    /* transition */
+    transition: all 0.8s ease;
+}
+#tlmD {
+    width: 21px;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0;
+    /* transition */
+    transition: all 0.8s ease;
+}
+.threeLineMenu:hover div {
+    box-shadow: 
+    0 0 10px 1px #ffffff3f, 0 0 20px 1px #ffffff48, 
+    0 0 30px 1px #0059ffb2;
+    /* transition */
+    transition: all 0.3s ease;
+}
+.threeLineMenu:hover {cursor:pointer;}
