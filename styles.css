@@ -10,7 +10,7 @@ body {
         rgba(0,0,0,1) 100%
     );
 
-    animation: gradientBg 30s linear infinite;
+    animation: gradientBg 45s ease-in-out infinite;
     background-size: 400% 400%;
     background-attachment: fixed;
 }
@@ -23,6 +23,7 @@ body {
 .title1 {
     margin: auto;
     position: absolute;
+    text-align: center;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
@@ -30,15 +31,23 @@ body {
 
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 333;
     font-size: 30px;
-    animation-name: title1in, title1in_;
-    animation-duration: 1.5s, 0.75s;
-    animation-timing-function: cubic-bezier(0,.93,.31,.99), ease;
-    animation-fill-mode: forwards;
 
     transition: all 0.3s ease;
 }
+#ttl1 {
+    transition: all 0.3s ease;
+    font-weight: 444;
+}
+#ttl2 {
+    font-size: 16px;
+    font-weight: 222;
+    position: relative;
+    top: -4px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
 @keyframes title1in {
     from {scale: 8; rotate: -50deg;}
     to   {scale: 1; }
@@ -47,7 +56,11 @@ body {
     from {opacity: 0;}
     to   {opacity: 1;}
 }
-.title1:hover{
+@keyframes subtitlein_ {
+    0%   {opacity: 0; position: relative; top: -40px;}
+    100% {opacity: 1; position: relative; top: -15px;}
+}
+#ttl1:hover{
     cursor: pointer;
     color: #a1a1a1;
     transition: all 0.3s ease;
@@ -70,7 +83,7 @@ body {
     text-align: center;
 
     /* box */
-    padding: 11px 14px 11px 14px;
+    margin: 11px 14px 11px 14px;
     display: inline-block;
 
     /* transition */
@@ -82,18 +95,11 @@ body {
     0 0 30px #0059ff;
     transition: all 0.3s ease;
 }
-@media only screen and (max-width: 550px) {.navBar a {padding: 11px 7px 11px 7px}}
-@media only screen and (max-width: 500px) {.navBar a {padding: 11px 3px 11px 3px}}
-@media only screen and (max-width: 450px) {
-    [data-alttext] > span   {display: none}
-    [data-alttext]::before  {content: attr(data-alttext)}
-    .navBar a {padding: 11px 7px 11px 7px}
-}
-@media only screen and (max-width: 300px) {.navBar {translate: -40px 0%;}}
+
+
 
 .allButTitle {
     opacity: 0;
-    animation: fadeIn 3s 0.5s forwards;
 }
 @keyframes fadeIn {
     from {opacity: 0;}
@@ -115,7 +121,7 @@ body {
     text-align: center;
 
     /* box */
-    padding: 7px 14px;
+    margin: 7px 14px;
 
     /* transition */
     transition: all 0.8s ease;
@@ -128,7 +134,7 @@ body {
 }
 
 .threeLineMenu {
-    padding: 5px 14px 5px 14px;
+    margin: 5px 14px 5px 14px;
     float: right;
 
     /* transition */
@@ -150,3 +156,7 @@ body {
     transition: all 0.3s ease;
 }
 .threeLineMenu:hover {cursor:pointer;}
+
+#title1_.BigBig div {
+    scale: 2;
+}

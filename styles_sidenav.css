@@ -1,0 +1,110 @@
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    background: rgb(18, 16, 29);/* linear-gradient(180deg, rgb(17,24,39) 0%, rgb(13, 19, 31) 100%);  #1a191c; */
+    padding-top: 60px;
+
+    transition: all 0.3s ease; 
+}
+.sidenav a {
+    text-decoration: none;
+    display: block;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 333;
+    font-size: 15px;
+    color: white;
+}
+.sidenav a:first-child {
+    margin: 8px 30px 8px 32px;
+    font-size: 20px;
+    position: absolute;
+    font-weight: 600;
+    top: 12px;
+    margin-left: 24px;
+}
+.sidenav a:last-child {
+    margin: 8px 30px 8px 32px;
+    font-size: 30px;
+    position: absolute;
+    top: 7px;
+    margin-left: 24px;
+    right: 0px
+}
+.sidenav div:nth-child(2) {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 1px;
+    margin-bottom: 15px;
+    z-index: -2;
+}
+.sidenav a:not(a:first-child, a:last-child) {
+    padding: 12px 12px;
+    border-radius: 7px;
+    margin: 3px 9px 3px 12px;
+    transition: all 0.3s ease; 
+}
+.sidenav a:not(a:first-child, a:last-child):hover {
+    background-color: rgba(55,65,81,0.5);
+    transition: all 0.1s ease; 
+}
+
+.sidenav a:not(a:first-child, a:last-child) span {
+    margin-left: 12px;
+}
+.sidenav a:not(a:first-child, a:last-child) i:nth-child(3) {
+    position: fixed;
+    right: 21px;
+    rotate: -90deg;
+}
+
+.sidenav a:not(a:first-child, a:last-child, a:nth-child(2)) div span {
+    display: none;
+    font-weight: 200;
+    position: relative;
+    margin: 6px 0px 0px 35px;
+    /* opacity: 0; */
+    transition: max-height 0.5s ease;
+}
+.sidenav a:not(a:first-child, a:last-child, a:nth-child(2)) div span:first-child {
+    margin-top: -3px;
+}
+.sidenav a:not(a:first-child, a:last-child, a:nth-child(2)) div span:hover {
+    text-shadow: 
+    0 0 10px #7b9aff, 0 0 20px #ffffffd8, 
+    0 0 30px #0059ff;
+    transition: all 0.3s ease;
+    cursor:pointer;
+    translate: 3px 0px;
+}
+.sidenav a:not(a:first-child, a:last-child) div:nth-last-child(2) {
+    display: none;
+    width: 100%;
+    height: 15px;
+    padding: 12px 12px;
+    border-radius: 7px;
+    margin-top: -100px;
+    margin-left: -100px;
+    position: relative;
+    top: -6px;
+    left: 88px;
+    transition: all 0.3s ease;
+}
+.sidenav a:not(a:first-child, a:last-child).ToggleTestAn div span {
+    background-color: white;
+}
+.sidenav a:not(a:first-child, a:last-child).expandCollapse1 div span {
+    display: block;
+}
+.sidenav a:not(a:first-child, a:last-child).expandCollapse2 div:nth-last-child(2) {
+    display: inline-block;
+}
+.sidenav a:not(a:first-child, a:last-child).expandCollapse3 {
+    background-color: rgba(55, 65, 81, 0.5);
+}

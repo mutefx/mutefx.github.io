@@ -1,28 +1,75 @@
-<html>
-    <body>
-        <link href="styles.css" rel="stylesheet">
-        <div class="title1">
+<!doctype html>
+<html lang="en">
+    <link href="styles.css" rel="stylesheet">
+    <link href="styles_sidenav.css" rel="stylesheet">
+    <link href="styles_scaler.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/logo.ico">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <div class="title1" id="title1_">
             <title>mutefx archives</title>
-            <span>mutefx</span>
+            <div>
+                <span id="ttl1">mutefx</span>
+                <span id="ttl2"><br>archives</span>
+            </div>
         </div>
-        <div class="allButTitle">
-            <div class="topBar"></div>
+    </head>
+    <body>
+        <div class="allButTitle" id="allButTitle_">
+            <div class="topBar" id="topBar2">
                 <div class="navBar">
-                    <a href="#home" data-alttext="DL"><span>Downloads</span></a>
-                    <a href="#home" data-alttext="TLS"><span>Tools</span></a>
-                    <a href="#home" data-alttext="ABT"><span>About</span></a>
+                    <a href="#home" data-alttext="DL" id="dlds"><span>Downloads</span></a>
+                    <a href="#home" data-alttext="TLS" id="tls"><span>Tools</span></a>
+                    <a href="#home" data-alttext="ABT" id="abt"><span>About</span></a>
                 </div>
-                <div class="navBarJPtext">
+                <div class="navBarJPtext" id="NavBarJPTEXT">
                     <a href="#home" class="webname">焼鮭鮪</a>
                 </div>
-                <div class="threeLineMenu">
+            </div>
+            <div class="openSideNav" id="openSideNav">
+                <a aria-label="Open Menu" href="javascript:void(0)" class="threeLineMenu" id="threeLineMenu">
                     <div id="tlmD"></div>
                     <div id="tlmD"></div>
                     <div id="tlmD"></div>
-                </div>
+                </a>
+            </div>
+            <div class="sidenav" id="sidenav">
+                <a class="SideNavTitle" id="SideNavTitle">Navigate</a>
+                <div class="sidenavtopBg" id="sidenavtopBg"></div>
+
+                <a href="#home" id="Shome">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a id="Sdlds">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Downloads</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <div class="BgThing_Sdlds" id="BgThing_Sdlds"></div>
+                    <div class="DownloadsContent" id="DownloadsContent">
+                        <span id="Test11111">Item 1</span>
+                        <span onclick="test()">Item 2</span>
+                        <span>Item 3</span>
+                        <span>Item 4</span>
+                    </div>
+                </a>
+                <a id="Stls">
+                    <i class="fa-solid fa-wrench"></i>
+                    <span>Tools</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+                <a id="Sabt">
+                    <i class="fa-regular fa-circle-question"></i>
+                    <span>About Me</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+                <a href="javascript:void(0)" aria-label="Close Menu" id="closeBtnNav" class="closeNav">&times;</a>
             </div>
         </div>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </body>
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/9372da0aa5.js" crossorigin="anonymous"></script>
 </html>

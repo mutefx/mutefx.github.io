@@ -1,0 +1,28 @@
+
+@media only screen and (max-width: 550px) {
+    .navBar a {margin: 11px 7px 11px 7px}
+
+}
+@media only screen and (max-width: 500px) {
+    .navBar a {margin: 11px 3px 11px 3px}
+}
+
+@media only screen and (max-width: 300px) {
+    .navBar {translate: -40px 0%;}
+}
+
+@media only screen and (max-width: 450px) {
+    .navBar {
+        [data-alttext] > span   {display: none}
+        [data-alttext]::before  {content: attr(data-alttext)}
+    }
+    .navBar a {margin: 11px 7px 11px 7px;}
+    #title1_ {transform: scale(1.25);}
+}
+
+@media only screen and (min-width: 450px) {
+    .sidenav {
+        width: 270px;
+        transition: all 0.3s ease;
+    }
+}
