@@ -16,7 +16,7 @@ function startupActions() {
     //  Startup actions enable/disable
     var scaleMobile_ = true;
     var closeSidenavA_ = true;
-    var entryAnims_ = false;
+    var entryAnims_ = true;
 
     function scaleMobile(enable = true) {
         if (window.mobileCheck() === enable) {
