@@ -15,10 +15,9 @@ let sleep = (ms, func) => setTimeout(() => { func }, ms)
 function startupActions() {
     // STARTUP OPTIONS:
     //  Startup actions enable/disable
-    var scaleMobile_ = true;
-    var closeSidenavA_ = true;
-    var entryAnims_ = true;
-
+    let scaleMobile_ = true;
+    let closeSidenavA_ = false;
+    let entryAnims_ = false;
     function scaleMobile(enable = true) {
         if (window.mobileCheck() === enable) {
             document.getElementById("title1_").style.transform = "scale(1.5)";
@@ -96,9 +95,12 @@ function doToggle(a1, b1, b2) {
 function test() {
     location.href = "https://www.w3schools.com";
 }
+function redirectto(a="../../index.html") {
+    window.location.replace(a,);
+}
 
 // Run these Functions
 startupActions();
 CustomAniFunctions();
-doToggle("#NavBarJPTEXT", "#title1_", "BigBig");
+//doToggle("# TEXT", "#title1_", "BigBig");
 document.querySelector("#Test11111").addEventListener('click', function() {test()});

@@ -1,0 +1,46 @@
+ 
+.title1 {
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    color: #fff;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 30px;
+
+    transition: all 0.3s ease;
+}
+#ttl1 {
+    transition: all 0.3s ease;
+    font-weight: 444;
+}
+#ttl2 {
+    font-size: 16px;
+    font-weight: 222;
+    position: relative;
+    top: -4px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+@keyframes title1in {
+    from {scale: 8; rotate: -50deg;}
+    to   {scale: 1; }
+}
+@keyframes title1in_ {
+    from {opacity: 0;}
+    to   {opacity: 1;}
+}
+@keyframes subtitlein_ {
+    0%   {opacity: 0; position: relative; top: -40px;}
+    100% {opacity: 1; position: relative; top: -15px;}
+}
+#ttl1:hover{
+    cursor: pointer;
+    color: #a1a1a1;
+    transition: all 0.3s ease;
+}

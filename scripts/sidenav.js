@@ -6,7 +6,6 @@ function main() {
         let divSpan = document.querySelector(`${btnToClick} div:nth-last-child(1)`);
         let divWhiteBg = document.querySelector(`${btnToClick} div:nth-last-child(2)`);
         let arrowDownVV = document.querySelector(`${btnToClick} i:nth-child(3)`);
-        let spanTextSSS = document.querySelector(`${btnToClick} span:nth-child(2)`);
         divSpan.style.maxHeight = "0";
 
         function closeDivspan(itemToClose = btnToClick, mode = 0) {
@@ -24,7 +23,6 @@ function main() {
             let divSpan1 = document.querySelector(`${itemToClose} div:nth-last-child(1)`);
             let divWhiteBg1 = document.querySelector(`${itemToClose} div:nth-last-child(2)`);
             let arrowDownVV1 = document.querySelector(`${itemToClose} i:nth-child(3)`);
-            let spanTextSSS1 = document.querySelector(`${btnToClick} span:nth-child(2)`);
             divSpan1.style.transition = `max-height ${delay1}s ease`;
             divSpan1.style.maxHeight = "0";
             for (let i = 0; i < divSpan1.children.length; i++) {
@@ -80,11 +78,15 @@ function main() {
     }
     function openSidenav() {
         let sidenav = document.getElementById("sidenav");
+        let snowWrapperA = document.querySelector(`.snowfall_wrapper`);
+        snowWrapperA.classList.add("MoveFrontClickEtc");
         sidenav.style.transition = "translate 0.5s ease";
         sidenav.style.translate = `0px 0px`;
     }
     function closeSidenav() {
         let sidenav = document.getElementById("sidenav");
+        let snowWrapperA = document.querySelector(`.snowfall_wrapper`);
+        snowWrapperA.classList.remove("MoveFrontClickEtc");
         sidenav.style.transition = "translate 0.5s ease";
         sidenav.style.translate = `-${sidenav.offsetWidth}px 0px`;
     }
@@ -92,6 +94,7 @@ function main() {
     document.querySelector("#threeLineMenu").addEventListener('click', function() {openSidenav()});
     document.querySelector("#closeBtnNav").addEventListener('click', function() {closeSidenav()});
     document.querySelector(".SideNavTitle").addEventListener('click', function() {closeSidenav()});
+    document.querySelector(".snowfall_wrapper").addEventListener('click', function() {closeSidenav()});
     let listOfMenus = ["#Sdlds", "#Stolast", "#Sabt"];
     let enabledI = null;
     for (let i = 0; i < listOfMenus.length; i++) {
