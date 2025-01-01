@@ -16,8 +16,8 @@ function startupActions() {
     // STARTUP OPTIONS:
     //  Startup actions enable/disable
     let scaleMobile_ = true;
-    let closeSidenavA_ = false;
-    let entryAnims_ = false;
+    let closeSidenavA_ = true;
+    let entryAnims_ = true;
     function scaleMobile(enable = true) {
         if (window.mobileCheck() === enable) {
             document.getElementById("title1_").style.transform = "scale(1.5)";
